@@ -87,7 +87,9 @@ else:
         st.subheader("1. Subir Material")
         uploaded_files = st.file_uploader("Sube los archivos JPG (Ignora los .CR3)", type=["jpg", "jpeg"], accept_multiple_files=True)
         
-        base_url = st.text_input("URL de la App (Cámbiala cuando despliegues en Streamlit)", value="http://localhost:8501")
+        # --- AQUÍ ESTÁ EL CAMBIO MÁGICO ---
+        # Ahora tu URL real de internet está fija por defecto
+        base_url = st.text_input("URL oficial de tu App", value="https://studio-black-delivery.streamlit.app")
         
         if st.button("Generar Galería y QR") and uploaded_files:
             # Guardar fotos en la memoria compartida
